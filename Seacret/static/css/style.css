@@ -17,13 +17,21 @@ body {
 	font-family: montserrat, arial, verdana;
 }
 /*form styles*/
-#bottle-form {
+#bottle-form{
     width: 600px;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
 }
-#bottle-form fieldset {
+
+#thanks{
+    width: 550px;
+	margin: 5px auto;
+	text-align: center;
+	position: relative;
+}
+
+#bottle-form fieldset{
 	background: white;
 	border: 0 none;
 	border-radius: 6px;
@@ -37,6 +45,19 @@ body {
 	/*stacking fieldsets above each other*/
 	position: relative;
 }
+
+#thanks fieldset{
+	background: white;
+	border: 0 none;
+	border-radius: 6px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 15px;
+	box-sizing: border-box;
+    width: 55%;
+    height: 250px;
+	margin: auto;
+}
+
 /*Hide all except first fieldset*/
 #bottle-form fieldset:not(:first-of-type) {
 	display: none;
@@ -55,8 +76,23 @@ body {
     font-size: 13px;
     resize: none;
 }
+
+#thanks input{
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 5px;
+    width: 50%;
+    height: 40%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+    font-size: 13px;
+    resize: none;
+}
+
 /*buttons*/
-#bottle-form .action-button {
+#bottle-form .action-button{
     width: 100px;
     height: 8%;
 	background: #F2C57C;
@@ -68,7 +104,23 @@ body {
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
-#bottle-form .action-button:hover, #bottle-form .action-button:focus {
+
+/* return to home page button */
+#thanks .action-button{
+	white-space: normal;
+    width: 130px;
+    height: 22%;
+	background: #F2C57C;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 8px 5px 8px 5px;
+	margin-bottom: 10px;
+}
+
+#bottle-form .action-button:hover, #bottle-form .action-button:focus, #thanks .action-button:hover, #thanks .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px rgba(230, 154, 41, 0.918);
 }
 /*headings*/
