@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>Bottle Messages</title>
+<link href="../static/bottle.PNG" rel="icon">
+<link href="../static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <form id="bottle-form">
+        <fieldset>
+            <h2 class="fs-title">A bottle floats onto your shore! Here is the message inside:</h2>
+            <textarea name="seacret" readonly>
+                {{ message }}
+            </textarea>
+            <a href="/">
+                <input id="bottle-button" type="button" class="submit action-button" value="Write a message!" />
+            </a>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -79,3 +79,26 @@ def addMessage(message):
     
     saveDb(db)
     closeDb(db)
+
+def retrieveNth(number):
+    db = openDb()
+    cursor = getCursor(db)
+    retrieveMessage = "SELECT * FROM seacrets LIMIT 1 OFFSET ('%d');" % (number)
+    message = cursor.execute(retrieveMessage).fetchone()
+
+    saveDb(db)
+    closeDb(db)
+
+    return message
+
+def numberRows():
+    db = openDb()
+    cursor = getCursor(db)
+    getRows = "SELECT Count(*) FROM seacrets"
+    rows = cursor.execute(getRows).fetchone()[0]
+    print "has " + str(rows) + " rows"
+
+    saveDb(db)
+    closeDb(db)
+
+    return rows
